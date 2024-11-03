@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fring Store - Catalogo</title>
+    <link rel="icon" href="img/title.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+     
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px 0;
+        }
+
+        header .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        
+
+       
+        main {
+            padding: 40px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .rejilla {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tarjeta {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .contenido-tarjeta {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .tarjeta h3 {
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        .tarjeta button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tarjeta button:hover {
+            background-color: #000000;
+        }
+
+       
+        footer {
+           
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .enlaces-sociales {
+            margin-bottom: 10px;
+        }
+
+        .enlaces-sociales a {
+            color: #333333;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .enlaces-sociales a:hover {
+            color: #007bff;
+        }
+
+        .texto-pie {
+            margin: 0;
+            text-align: center;
+        }
+        .redirigir {
+            text-decoration: none;
+        }
+        
+     
+        @media (max-width: 768px) {
+            header .contenedor {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .rejilla {
+                grid-template-columns: 1fr;
+            }
+        }
+        a, a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+        .logo {
+    transition: filter 0.5s ease; 
+  
+}
+
+.logo:hover {
+  filter: drop-shadow(0px 0px 5px blue);
+  opacity: 0.7; 
+  filter: brightness(1.2 blue); 
+  transition: filter 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="/catalogo"> 
+                <img src="img/logo.PNG" alt="Fring Store Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/poleras.html">Poleras</a></li>
+                    <li><a href="/proximamente.html">Tazas</a></li>
+                    <li><a href="/accesorios.html">Accesorios</a></li>
+                    <li><a href="/proximamente.html">Peluches</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo" class="contenedor">
+            <h2>Nuestro Catálogo</h2>
+            <div class="rejilla">
+                <a href="/poleras.html" class="redirigir">
+                <div class="tarjeta" id="poleras">
+                    <img src="img/anuel.png" alt="Poleras">
+                    <div class="contenido-tarjeta">
+                        <h3>Poleras</h3>
+                        <button>Ver Más</button>
+                    </div>
+                </div></a>
+                <a href="/accesorios.html" class="redirigir">
+                <div class="tarjeta" id="peluches">
+                    <img src="img/peluche.png" alt="Peluches">
+                    <div class="contenido-tarjeta">
+                        <h3>Peluches</h3>
+                        <button>Ver Más</button>
+                    </div>
+                </div></a>
+                <a href="/proximamente.html" class="redirigir">
+                <div class="tarjeta" id="tazas">
+                    <img src="img/tazas.png" alt="Tazas">
+                    <div class="contenido-tarjeta">
+                        <h3>Tazas</h3>
+                        <button>Ver Más</button>
+                    </div>
+                </div></a>
+                <a href="/proximamente.html" class="redirigir">
+                <div class="tarjeta" id="accesorios">
+                    <img src="img/accesorios.png" alt="Accesorios">
+                    <div class="contenido-tarjeta">
+                        <h3>Accesorios</h3>
+                        <button>Ver Más</button>
+                    </div>
+                </div></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <div class="enlaces-sociales">
+                <a href="https://www.instagram.com/fring_store" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="texto-pie">&copy; 2024 Fring Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fring Store - Accesorios</title>
+    <link rel="icon" href="img/title.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="/index.html"> 
+                <img src="img/logo.PNG" alt="Fring Store Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/poleras.html">Poleras</a></li>
+                    <li><a href="/proximamente.html">Tazas</a></li>
+                    <li><a href="/accesorios.html">Accesorios</a></li>
+                    <li><a href="/proximamente.html">Peluches</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <div class="container">
+        <h2>Accesorios</h2>
+        <div class="product-grid">
+            <div class="product-card" data-images='["img/placa_bad.png", "img/placa_anuel.png"]'>
+                <img src="img/Cuadros artistas.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Spotify</h2>
+                    <p class="product-artist">Personalizable 15x10</p>
+                    <p class="product-artist">$5.000</p>
+                </div>
+            </div>
+            <div class="product-card" data-images='["img/messi.png","img/cr7.png"]' >
+                <img src="img/Placagoogle catalogo.png"  alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Google</h2>
+                    <p class="product-artist">Personalizable 15x10</p>
+                    <p class="product-artist">$5.000</p>
+                </div>
+            </div>
+            
+            
+            
+    </div>
+
+    
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="arrow arrow-left">&lt;</span>
+        <span class="arrow arrow-right">&gt;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <footer >
+    
+    <div class="container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/fring_store" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2024 Fring Store. Todos los derechos reservados.</p>
+    </div>
+</main>
+</footer>
+<script>
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const productCards = document.querySelectorAll('.product-card');
+    const arrowLeft = document.querySelector('.arrow-left');
+    const arrowRight = document.querySelector('.arrow-right');
+
+    let currentImages = [];
+    let currentImageIndex = 0;
+
+    productCards.forEach(card => {
+        card.addEventListener('click', function() {
+            currentImages = JSON.parse(this.getAttribute('data-images'));
+            currentImageIndex = 0;
+            updateModalImage();
+            modal.style.display = 'block';
+        });
+    });
+
+    function updateModalImage() {
+        modalImg.src = currentImages[currentImageIndex];
+    }
+
+    arrowLeft.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        updateModalImage();
+    });
+
+    arrowRight.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        updateModalImage();
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>

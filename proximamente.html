@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fring Store - Proximamente</title>
+    <link rel="icon" href="img/title.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Añade este estilo para que el footer esté en la parte inferior */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1em 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="/catalogo"> 
+                <img src="img/logo.PNG" alt="Fring Store Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/poleras.html">Poleras</a></li>
+                    <li><a href="/proximamente.html">Tazas</a></li>
+                    <li><a href="/accesorios.html">Accesorios</a></li>
+                    <li><a href="/proximamente.html">Peluches</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container" style="display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; color: #fff; text-align: center;">
+            <h2 class="prox" style="font-size: 2rem; font-weight: bold;">Próximamente</h2>
+        </div>
+        
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/fring_store" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2024 Fring Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const img = this.querySelector('.product-image');
+                modal.style.display = 'block';
+                modalImg.src = img.src.replace('200&width=200', '800&width=800');
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
