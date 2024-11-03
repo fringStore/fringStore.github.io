@@ -202,7 +202,7 @@ h1, h2 {
     z-index: 1010;
 }
 .arrow {
-    color: #fff;
+    color: #000000;
     position: absolute;
     top: 50%;
     font-size: 30px;
@@ -215,7 +215,7 @@ h1, h2 {
     transition: background-color 0.3s ease;
 }
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(197, 234, 245, 0.8);
 }
 .arrow-left {
     left: 20px;
