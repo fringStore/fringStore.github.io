@@ -3,266 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fring Store - Catalogo</title>
+    <title>Fring Store - Catálogo de Camisetas de Cantantes</title>
     <link rel="icon" href="img/title.PNG">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-       
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            color: #333333;
-            line-height: 1.6;
-        }
-
-        .contenedor {
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-     
-        header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 20px 0;
-        }
-
-        header .contenedor {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 50px;
-            width: auto;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333333;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-        
-
-       
-        main {
-            padding: 40px 0;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-        }
-
-        .rejilla {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .tarjeta {
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .tarjeta:hover {
-            transform: translateY(-5px);
-        }
-
-        .tarjeta img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .contenido-tarjeta {
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .tarjeta h3 {
-            text-align: center;
-            margin: 0 0 10px 0;
-        }
-
-        .tarjeta button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #333333;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .tarjeta button:hover {
-            background-color: #000000;
-        }
-
-       
-        footer {
-           
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        footer .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .enlaces-sociales {
-            margin-bottom: 10px;
-        }
-
-        .enlaces-sociales a {
-            color: #333333;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .enlaces-sociales a:hover {
-            color: #007bff;
-        }
-
-        .texto-pie {
-            margin: 0;
-            text-align: center;
-        }
-        .redirigir {
-            text-decoration: none;
-        }
-        
-     
-        @media (max-width: 768px) {
-            header .contenedor {
-                flex-direction: column;
-            }
-
-            nav ul {
-                margin-top: 20px;
-            }
-
-            nav ul li {
-                margin: 0 10px;
-            }
-
-            .rejilla {
-                grid-template-columns: 1fr;
-            }
-        }
-        a, a:visited {
-            color: inherit;
-            text-decoration: none;
-        }
-        .logo {
-    transition: filter 0.5s ease; 
-  
-}
-
-.logo:hover {
-  filter: drop-shadow(0px 0px 5px blue);
-  opacity: 0.7; 
-  filter: brightness(1.2 blue); 
-  transition: filter 0.3s ease;
-}
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="contenedor">
-            <a href="/catalogo"> 
+            <a href="/index.html"> 
                 <img src="img/logo.PNG" alt="Fring Store Logo" class="logo">
             </a>
-            <nav>
-                <ul>
-                    <li><a href="/poleras.html">Poleras</a></li>
-                    <li><a href="/proximamente.html">Tazas</a></li>
-                    <li><a href="/accesorios.html">Accesorios</a></li>
-                    <li><a href="/proximamente.html">Peluches</a></li>
-                </ul>
-            </nav>
+            
         </div>
     </header>
-
     <main>
-        <section id="catalogo" class="contenedor">
-            <h2>Nuestro Catálogo</h2>
-            <div class="rejilla">
-                <a href="/poleras.html" class="redirigir">
-                <div class="tarjeta" id="poleras">
-                    <img src="img/anuel.png" alt="Poleras">
-                    <div class="contenido-tarjeta">
-                        <h3>Poleras</h3>
-                        <button>Ver Más</button>
-                    </div>
-                </div></a>
-                <a href="/accesorios.html" class="redirigir">
-                <div class="tarjeta" id="peluches">
-                    <img src="img/peluche.png" alt="Peluches">
-                    <div class="contenido-tarjeta">
-                        <h3>Peluches</h3>
-                        <button>Ver Más</button>
-                    </div>
-                </div></a>
-                <a href="/proximamente.html" class="redirigir">
-                <div class="tarjeta" id="tazas">
-                    <img src="img/tazas.png" alt="Tazas">
-                    <div class="contenido-tarjeta">
-                        <h3>Tazas</h3>
-                        <button>Ver Más</button>
-                    </div>
-                </div></a>
-                <a href="/proximamente.html" class="redirigir">
-                <div class="tarjeta" id="accesorios">
-                    <img src="img/accesorios.png" alt="Accesorios">
-                    <div class="contenido-tarjeta">
-                        <h3>Accesorios</h3>
-                        <button>Ver Más</button>
-                    </div>
-                </div></a>
+    <div class="container">
+        <h2>Poleras</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="img/anuel.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">RHLM2 Tour</h2>
+                    <p class="product-artist">Anuel AA</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contenedor">
-            <div class="enlaces-sociales">
-                <a href="https://www.instagram.com/fring_store" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <div class="product-card">
+                <img src="img/45.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">BRR</h2>
+                    <p class="product-artist">Anuel AA</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
             </div>
-            <p class="texto-pie">&copy; 2024 Fring Store. Todos los derechos reservados.</p>
+            <div class="product-card">
+                <img src="img/46.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">RHLM Album</h2>
+                    <p class="product-artist">Anuel AA</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/47.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">2016</h2>
+                    <p class="product-artist">Anuel AA</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/1.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Snap Out Of It</h2>
+                    <p class="product-artist">Arctic Monkeys</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/2.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">We Can Be Friends</h2>
+                    <p class="product-artist">Ariana Grande</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/3.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Un Verano Sin Ti</h2>
+                    <p class="product-artist">Bad Bunny</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/41.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Nadie Sabe</h2>
+                    <p class="product-artist">Bad Bunny</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/42.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Ultimo Tour</h2>
+                    <p class="product-artist">Bad Bunny</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/43.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">YHLQMDLG</h2>
+                    <p class="product-artist">Bad Bunny</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/44.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">x100PRE</h2>
+                    <p class="product-artist">Bad Bunny</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/4.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Happier Than Ever</h2>
+                    <p class="product-artist">Billie Eilish</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/5.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Happier Than Ever 2</h2>
+                    <p class="product-artist">Billie Eilish</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/6.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Pink Venom</h2>
+                    <p class="product-artist">Black Pink</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/7.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">One more time</h2>
+                    <p class="product-artist">Daft Punk</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/8.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">More Life</h2>
+                    <p class="product-artist">Drake</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/9.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Modo Diablo</h2>
+                    <p class="product-artist">Duki</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/10.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Lose Yourself</h2>
+                    <p class="product-artist">Eminem</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/11.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Ferxxo</h2>
+                    <p class="product-artist">Feid</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/12.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Esencia Tour</h2>
+                    <p class="product-artist">Humbe</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/13.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">C´Mere</h2>
+                    <p class="product-artist">Interpol</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/14.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Nectar</h2>
+                    <p class="product-artist">Joji</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/15.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">$ad Boyz 4 Life</h2>
+                    <p class="product-artist">Junior H</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/16.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Graduation</h2>
+                    <p class="product-artist">Kanye West</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/17.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Damn</h2>
+                    <p class="product-artist">Kendrick Lamar</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/18.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Pink Aura</h2>
+                    <p class="product-artist">Kenia OS</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/19.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Honey Moon</h2>
+                    <p class="product-artist">Lana Del Rey</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/20.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">20 Años</h2>
+                    <p class="product-artist">Luis Miguel</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/21.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">The Spins</h2>
+                    <p class="product-artist">Mac Miller</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/22.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Rush</h2>
+                    <p class="product-artist">Maneskin</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/23.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Mi Nuevo Yo</h2>
+                    <p class="product-artist">Natanael</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/24.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">The World Is Yours...</h2>
+                    <p class="product-artist">Natanael</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/25.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Bad Idea Right?</h2>
+                    <p class="product-artist">Olivia Rodrigo</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/26.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Do You Get Deja Vu</h2>
+                    <p class="product-artist">Olivia Rodrigo</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/27.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sour</h2>
+                    <p class="product-artist">Olivia Rodrigo</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/28.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">All I Wanted</h2>
+                    <p class="product-artist">Paramore</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/29.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Genesis</h2>
+                    <p class="product-artist">Peso Pluma</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/30.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Plastic</h2>
+                    <p class="product-artist">Gorillaz</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/31.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Circles</h2>
+                    <p class="product-artist">Post Malone</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/32.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">No Surprises</h2>
+                    <p class="product-artist">Radiohead</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/33.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">A New Star</h2>
+                    <p class="product-artist">Rels B</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/34.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Espresso</h2>
+                    <p class="product-artist">Sabrina Carpenter</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/35.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Espresso V2</h2>
+                    <p class="product-artist">Sabrina Carpenter</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/36.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">´S Version</h2>
+                    <p class="product-artist">Taylor Swift</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+              <img src="img/37.png" alt="" class="product-image">
+              <div class="product-info">
+                  <h2 class="product-name">Cruel Summer</h2>
+                  <p class="product-artist">Taylor Swift</p>
+                  <p class="product-artist">$12.000</p>
+              </div>
+          </div>
+          <div class="product-card">
+                <img src="img/38.png" alt="" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Keep Me Fed</h2>
+                    <p class="product-artist">The Warning</p>
+                    <p class="product-artist">$12.000</p>
+                </div>
+            </div>
+            <div class="product-card">
+              <img src="img/39.png" alt="" class="product-image">
+              <div class="product-info">
+                  <h2 class="product-name">Save Your Tears</h2>
+                  <p class="product-artist">The Weeknd</p>
+                  <p class="product-artist">$12.000</p>
+              </div>
+          </div>
+          <div class="product-card">
+            <img src="img/40.png" alt="" class="product-image">
+            <div class="product-info">
+                <h2 class="product-name">Dance Trip</h2>
+                <p class="product-artist">Trueno</p>
+                <p class="product-artist">$12.000</p>
+            </div>
         </div>
-    </footer>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div>
+  <footer>
+    <div class="container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/fring_store" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2024 Fring Store. Todos los derechos reservados.</p>
+    </div>
+</main>
+</footer>
+  <script>
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const closeBtn = document.getElementsByClassName('close')[0];
+      const productCards = document.querySelectorAll('.product-card');
+
+      productCards.forEach(card => {
+          card.addEventListener('click', function() {
+              const img = this.querySelector('.product-image');
+              modal.style.display = 'block';
+              modalImg.src = img.src.replace('200&width=200', '800&width=800');
+          });
+      });
+
+      closeBtn.onclick = function() {
+          modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = 'none';
+          }
+      }
+  </script>
 </body>
 </html>
